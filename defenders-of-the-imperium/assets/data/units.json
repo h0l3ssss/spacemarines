@@ -1,0 +1,45 @@
+{
+  "assault_marine": {
+    "name": "Assault Intercessor",
+    "sprite": "marine_assault",
+    "speed": 62,
+    "meleeRange": 22,
+    "onHit": { "status": "BLEED", "chance": 0.3, "duration": 3, "power": 5 },
+    "attackSound": "CHAINSWORD"
+  },
+  "veteran_marine": {
+    "name": "Veteran Assault Marine",
+    "sprite": "marine_veteran",
+    "speed": 64,
+    "meleeRange": 22,
+    "onHit": { "status": "BLEED", "chance": 0.4, "duration": 3, "power": 8 },
+    "attackSound": "CHAINSWORD"
+  },
+  "terminator": {
+    "name": "Terminator",
+    "sprite": "marine_terminator",
+    "speed": 44,
+    "meleeRange": 24,
+    "radius": 13,
+    "damageType": "ENERGY",
+    "rangedProjectile": "STORM_BOLT",
+    "attackSound": "POWER_FIST"
+  },
+  "chaplain": {
+    "name": "Chaplain",
+    "sprite": "marine_chaplain",
+    "speed": 60,
+    "meleeRange": 24,
+    "damageType": "ENERGY",
+    "aura": { "radius": 100 },
+    "attackSound": "POWER_SWORD"
+  },
+  "tactical_marine": {
+    "name": "Tactical Marine",
+    "sprite": "marine_tactical",
+    "speed": 58,
+    "meleeRange": 22,
+    "rangedProjectile": "BOLT",
+    "attackSound": "MELEE_HIT"
+  }
+}

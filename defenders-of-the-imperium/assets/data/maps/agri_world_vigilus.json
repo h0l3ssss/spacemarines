@@ -1,0 +1,113 @@
+{
+  "id": "agri_world_vigilus",
+  "name": "AGRI-WORLD VIGILUS",
+  "subtitle": "Harvest Belt Theta-9",
+  "description": "The grain belts of Vigilus feed three sub-sectors. Tyranid splinter fleets have made planetfall. The Ultramarines must hold the Theta-9 bastion until the evacuation convoys are clear.",
+  "theme": "agri",
+  "order": 1,
+  "waveSet": "vigilus_tyranids",
+  "background": "maps/agri_world_vigilus.jpg",
+  "planetSprite": "planet_agri",
+  "music": "BATTLE",
+  "startingRequisition": 260,
+  "baseHp": 100,
+  "intro": [
+    "+++ INCOMING TRANSMISSION +++",
+    "AGRI-WORLD VIGILUS IS UNDER ATTACK.",
+    "TYRANID CONTACT CONFIRMED.",
+    "IMPERIAL DEFENCES ARE COLLAPSING.",
+    "ONE COMPANY OF ASTARTES REMAINS.",
+    "THEY SHALL NOT BREAK."
+  ],
+  "heroStart": [165, 330],
+  "base": { "x": 62, "y": 400, "radius": 70, "sprite": "fortress" },
+  "paths": [
+    {
+      "id": 0,
+      "width": 64,
+      "points": [
+        [1340, 590], [1200, 592], [1090, 562], [1010, 482], [960, 402],
+        [860, 410], [790, 470], [740, 560], [640, 602], [540, 562], [500, 470], [520, 360],
+        [560, 262], [520, 170], [420, 138], [320, 180], [280, 282], [250, 380], [170, 410], [92, 402]
+      ]
+    },
+    {
+      "id": 1,
+      "width": 64,
+      "points": [
+        [1340, 200], [1200, 205], [1090, 240], [1010, 320], [960, 398],
+        [860, 410], [790, 470], [740, 560], [640, 602], [540, 562], [500, 470], [520, 360],
+        [560, 262], [520, 170], [420, 138], [320, 180], [280, 282], [250, 380], [170, 410], [92, 402]
+      ]
+    }
+  ],
+  "spawns": [
+    { "path": 0, "x": 1236, "y": 596, "label": "NORTHERN FIELDS" },
+    { "path": 1, "x": 1236, "y": 208, "label": "SOUTHERN SILOS" }
+  ],
+  "buildPoints": [
+    { "id": 0, "x": 1150, "y": 400 },
+    { "id": 1, "x": 962, "y": 598 },
+    { "id": 2, "x": 990, "y": 176 },
+    { "id": 3, "x": 880, "y": 318 },
+    { "id": 4, "x": 868, "y": 522 },
+    { "id": 5, "x": 640, "y": 474 },
+    { "id": 6, "x": 668, "y": 330 },
+    { "id": 7, "x": 420, "y": 548 },
+    { "id": 8, "x": 410, "y": 262 },
+    { "id": 9, "x": 660, "y": 176 },
+    { "id": 10, "x": 176, "y": 286 },
+    { "id": 11, "x": 336, "y": 468 },
+    { "id": 12, "x": 222, "y": 160 }
+  ],
+  "terrain": [
+    { "type": "forest", "x": 1200, "y": 690, "scale": 1.4 },
+    { "type": "forest", "x": 1260, "y": 40, "scale": 1.2 },
+    { "type": "forest", "x": 40, "y": 660, "scale": 1.2 },
+    { "type": "forest", "x": 800, "y": 40, "scale": 0.9 },
+    { "type": "tree", "x": 1080, "y": 660, "scale": 1.1 },
+    { "type": "tree", "x": 1030, "y": 690, "scale": 0.9 },
+    { "type": "tree", "x": 1270, "y": 330, "scale": 1.0 },
+    { "type": "tree", "x": 1255, "y": 470, "scale": 0.8 },
+    { "type": "tree", "x": 300, "y": 640, "scale": 1.0 },
+    { "type": "tree", "x": 250, "y": 690, "scale": 1.2 },
+    { "type": "tree", "x": 30, "y": 170, "scale": 1.1 },
+    { "type": "tree", "x": 90, "y": 110, "scale": 0.9 },
+    { "type": "tree", "x": 720, "y": 60, "scale": 1.0 },
+    { "type": "tree", "x": 900, "y": 690, "scale": 1.0 },
+    { "type": "tree", "x": 560, "y": 690, "scale": 0.9 },
+    { "type": "wheat", "x": 1150, "y": 120, "scale": 1.3 },
+    { "type": "wheat", "x": 440, "y": 660, "scale": 1.2 },
+    { "type": "wheat", "x": 760, "y": 660, "scale": 1.0 },
+    { "type": "wheat", "x": 120, "y": 560, "scale": 0.9 },
+    { "type": "silo", "x": 1215, "y": 120, "scale": 1.0 },
+    { "type": "silo", "x": 1240, "y": 150, "scale": 0.8 },
+    { "type": "ruin", "x": 780, "y": 270, "scale": 1.0 },
+    { "type": "ruin", "x": 560, "y": 400, "scale": 0.8, "variant": 1 },
+    { "type": "ruin", "x": 1060, "y": 630, "scale": 0.9, "variant": 1 },
+    { "type": "statue", "x": 640, "y": 540, "scale": 1.0 },
+    { "type": "wreck", "x": 1100, "y": 300, "scale": 1.0 },
+    { "type": "wreck", "x": 330, "y": 60, "scale": 0.9, "flip": true },
+    { "type": "crater", "x": 1040, "y": 400, "scale": 1.0 },
+    { "type": "crater", "x": 700, "y": 420, "scale": 0.8 },
+    { "type": "crater", "x": 360, "y": 350, "scale": 0.9 },
+    { "type": "crater", "x": 900, "y": 130, "scale": 1.1 },
+    { "type": "crater", "x": 600, "y": 110, "scale": 0.7 },
+    { "type": "barricade", "x": 150, "y": 460, "scale": 1.0 },
+    { "type": "barricade", "x": 150, "y": 345, "scale": 1.0, "flip": true },
+    { "type": "barricade", "x": 470, "y": 205, "scale": 0.8 },
+    { "type": "crates", "x": 250, "y": 520, "scale": 1.0 },
+    { "type": "crates", "x": 760, "y": 360, "scale": 0.9 },
+    { "type": "crates", "x": 1180, "y": 520, "scale": 0.8 },
+    { "type": "bunker", "x": 90, "y": 250, "scale": 0.9 },
+    { "type": "pipes", "x": 1150, "y": 250, "scale": 1.0 },
+    { "type": "pipes", "x": 520, "y": 640, "scale": 0.9, "flip": true },
+    { "type": "fence", "x": 1100, "y": 60, "scale": 1.0 },
+    { "type": "fence", "x": 400, "y": 610, "scale": 1.0 },
+    { "type": "rocks", "x": 960, "y": 250, "scale": 1.0 },
+    { "type": "rocks", "x": 300, "y": 400, "scale": 0.8 },
+    { "type": "rocks", "x": 740, "y": 130, "scale": 0.9 },
+    { "type": "skulls", "x": 1000, "y": 420, "scale": 1.0 },
+    { "type": "skulls", "x": 610, "y": 520, "scale": 0.8 }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "necron_tomb_world",
+  "name": "NECRON TOMB WORLD",
+  "subtitle": "Sepulchre of Szarekh-Ul",
+  "description": "Beneath the dunes, something ancient has awoken. Obelisks pulse with green fire as legions of living metal march from the tomb vaults. Their dead do not stay dead.",
+  "theme": "tomb",
+  "order": 2,
+  "requires": "agri_world_vigilus",
+  "available": false,
+  "planetSprite": "planet_tomb",
+  "intro": [
+    "+++ ASTROPATHIC RELAY +++",
+    "ENERGY SIGNATURES DETECTED BENEATH THE DUNES.",
+    "THE DEAD ARE WALKING."
+  ]
+}

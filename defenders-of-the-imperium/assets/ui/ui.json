@@ -1,0 +1,46 @@
+{
+  "generator": "tools/AssetGenerator - procedural placeholder art, replace PNGs freely",
+  "sheets": [
+
+  ],
+  "images": [
+    {"name": "icon_requisition", "file": "ui/icons/icon_requisition.png", "originX": 32, "originY": 32, "scale": 0.500},
+    {"name": "icon_wave", "file": "ui/icons/icon_wave.png", "originX": 32, "originY": 32, "scale": 0.500},
+    {"name": "icon_base", "file": "ui/icons/icon_base.png", "originX": 32, "originY": 32, "scale": 0.500},
+    {"name": "icon_pause", "file": "ui/icons/icon_pause.png", "originX": 32, "originY": 32, "scale": 0.500},
+    {"name": "icon_play", "file": "ui/icons/icon_play.png", "originX": 32, "originY": 32, "scale": 0.500},
+    {"name": "icon_speed1", "file": "ui/icons/icon_speed1.png", "originX": 32, "originY": 32, "scale": 0.500},
+    {"name": "icon_speed2", "file": "ui/icons/icon_speed2.png", "originX": 32, "originY": 32, "scale": 0.500},
+    {"name": "icon_star", "file": "ui/icons/icon_star.png", "originX": 32, "originY": 32, "scale": 0.500},
+    {"name": "icon_star_empty", "file": "ui/icons/icon_star_empty.png", "originX": 32, "originY": 32, "scale": 0.500},
+    {"name": "icon_lock", "file": "ui/icons/icon_lock.png", "originX": 32, "originY": 32, "scale": 0.500},
+    {"name": "icon_upgrade", "file": "ui/icons/icon_upgrade.png", "originX": 32, "originY": 32, "scale": 0.500},
+    {"name": "icon_sell", "file": "ui/icons/icon_sell.png", "originX": 32, "originY": 32, "scale": 0.500},
+    {"name": "icon_repair", "file": "ui/icons/icon_repair.png", "originX": 32, "originY": 32, "scale": 0.500},
+    {"name": "icon_next_wave", "file": "ui/icons/icon_next_wave.png", "originX": 32, "originY": 32, "scale": 0.500},
+    {"name": "icon_tower_tactical", "file": "ui/icons/icon_tower_tactical.png", "originX": 48, "originY": 48, "scale": 0.500},
+    {"name": "icon_tower_assault", "file": "ui/icons/icon_tower_assault.png", "originX": 48, "originY": 48, "scale": 0.500},
+    {"name": "icon_tower_devastator", "file": "ui/icons/icon_tower_devastator.png", "originX": 48, "originY": 48, "scale": 0.500},
+    {"name": "icon_tower_techmarine", "file": "ui/icons/icon_tower_techmarine.png", "originX": 48, "originY": 48, "scale": 0.500},
+    {"name": "icon_ability_boltstorm", "file": "ui/icons/icon_ability_boltstorm.png", "originX": 40, "originY": 40, "scale": 0.500},
+    {"name": "icon_ability_rally", "file": "ui/icons/icon_ability_rally.png", "originX": 40, "originY": 40, "scale": 0.500},
+    {"name": "icon_ability_powersword", "file": "ui/icons/icon_ability_powersword.png", "originX": 40, "originY": 40, "scale": 0.500},
+    {"name": "icon_ability_angel", "file": "ui/icons/icon_ability_angel.png", "originX": 40, "originY": 40, "scale": 0.500},
+    {"name": "icon_ability_droppod", "file": "ui/icons/icon_ability_droppod.png", "originX": 40, "originY": 40, "scale": 0.500},
+    {"name": "icon_ability_bombard", "file": "ui/icons/icon_ability_bombard.png", "originX": 40, "originY": 40, "scale": 0.500},
+    {"name": "icon_ability_thunderhawk", "file": "ui/icons/icon_ability_thunderhawk.png", "originX": 40, "originY": 40, "scale": 0.500},
+    {"name": "aquila_emblem", "file": "ui/icons/aquila_emblem.png", "originX": 128, "originY": 64, "scale": 0.500},
+    {"name": "planet_agri", "file": "ui/icons/planet_agri.png", "originX": 128, "originY": 128, "scale": 0.500},
+    {"name": "planet_tomb", "file": "ui/icons/planet_tomb.png", "originX": 128, "originY": 128, "scale": 0.500},
+    {"name": "planet_hive", "file": "ui/icons/planet_hive.png", "originX": 128, "originY": 128, "scale": 0.500}
+  ],
+  "ninePatches": [
+    {"name": "ui_panel", "file": "ui/ui_panel.png", "left": 20, "right": 20, "top": 20, "bottom": 20},
+    {"name": "ui_button", "file": "ui/ui_button.png", "left": 14, "right": 14, "top": 12, "bottom": 12},
+    {"name": "ui_button_hover", "file": "ui/ui_button_hover.png", "left": 14, "right": 14, "top": 12, "bottom": 12},
+    {"name": "ui_button_disabled", "file": "ui/ui_button_disabled.png", "left": 14, "right": 14, "top": 12, "bottom": 12},
+    {"name": "ui_button_gold", "file": "ui/ui_button_gold.png", "left": 14, "right": 14, "top": 12, "bottom": 12},
+    {"name": "ui_button_danger", "file": "ui/ui_button_danger.png", "left": 14, "right": 14, "top": 12, "bottom": 12},
+    {"name": "ui_slot", "file": "ui/ui_slot.png", "left": 16, "right": 16, "top": 16, "bottom": 16}
+  ]
+}

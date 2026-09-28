@@ -1,0 +1,103 @@
+{
+  "vigilus_tyranids": {
+    "timeBetweenWaves": 22,
+    "earlyCallBonusMax": 30,
+    "flawlessBonus": 15,
+    "waves": [
+      {
+        "title": "SCOUTING BROOD",
+        "reward": 30,
+        "groups": [
+          { "enemy": "termagant", "count": 10, "interval": 1.3, "path": 0 }
+        ]
+      },
+      {
+        "title": "THE SWARM GATHERS",
+        "reward": 35,
+        "groups": [
+          { "enemy": "termagant", "count": 14, "interval": 1.0 },
+          { "enemy": "hormagaunt", "count": 4, "interval": 1.2, "delay": 9, "path": 1 }
+        ]
+      },
+      {
+        "title": "HORMAGAUNT PACKS",
+        "reward": 40,
+        "groups": [
+          { "enemy": "hormagaunt", "count": 12, "interval": 0.8, "path": 0 },
+          { "enemy": "termagant", "count": 12, "interval": 0.9, "delay": 4, "path": 1 }
+        ]
+      },
+      {
+        "title": "SYNAPSE DETECTED",
+        "reward": 45,
+        "groups": [
+          { "enemy": "termagant", "count": 16, "interval": 0.8 },
+          { "enemy": "tyranid_warrior", "count": 2, "interval": 7, "delay": 6 },
+          { "enemy": "gargoyle", "count": 6, "interval": 0.9, "delay": 12, "path": 1 }
+        ]
+      },
+      {
+        "title": "GENESTEALER AMBUSH",
+        "reward": 50,
+        "groups": [
+          { "enemy": "genestealer", "count": 8, "interval": 1.3, "path": 1 },
+          { "enemy": "termagant", "count": 14, "interval": 0.7, "delay": 3, "path": 0 },
+          { "enemy": "gargoyle", "count": 8, "interval": 0.7, "delay": 10, "path": 0 }
+        ]
+      },
+      {
+        "title": "COMBINED ASSAULT",
+        "reward": 55,
+        "groups": [
+          { "enemy": "termagant", "count": 20, "interval": 0.6, "path": 0 },
+          { "enemy": "hormagaunt", "count": 16, "interval": 0.6, "delay": 2, "path": 1 },
+          { "enemy": "tyranid_warrior", "count": 3, "interval": 5, "delay": 8 },
+          { "enemy": "genestealer", "count": 6, "interval": 1.0, "delay": 12, "path": 0 }
+        ]
+      },
+      {
+        "title": "THE BEAST",
+        "reward": 65,
+        "groups": [
+          { "enemy": "carnifex", "count": 1, "delay": 4, "path": 0 },
+          { "enemy": "tyranid_warrior", "count": 4, "interval": 4, "delay": 2, "path": 1 },
+          { "enemy": "termagant", "count": 18, "interval": 0.6 },
+          { "enemy": "gargoyle", "count": 10, "interval": 0.6, "delay": 14 }
+        ]
+      },
+      {
+        "title": "THE GREAT DEVOURER",
+        "reward": 75,
+        "groups": [
+          { "enemy": "termagant", "count": 50, "interval": 0.3 },
+          { "enemy": "hormagaunt", "count": 30, "interval": 0.4, "delay": 5 },
+          { "enemy": "gargoyle", "count": 16, "interval": 0.5, "delay": 10 },
+          { "enemy": "tyranid_warrior", "count": 4, "interval": 5, "delay": 12 }
+        ]
+      },
+      {
+        "title": "ELITE BROOD",
+        "reward": 90,
+        "groups": [
+          { "enemy": "carnifex", "count": 2, "interval": 12, "delay": 2 },
+          { "enemy": "tyranid_warrior", "count": 6, "interval": 3, "delay": 4 },
+          { "enemy": "genestealer", "count": 12, "interval": 0.8, "delay": 8 },
+          { "enemy": "termagant", "count": 40, "interval": 0.35 },
+          { "enemy": "gargoyle", "count": 12, "interval": 0.5, "delay": 16 }
+        ]
+      },
+      {
+        "title": "THE HIVE TYRANT",
+        "reward": 0,
+        "boss": true,
+        "groups": [
+          { "enemy": "termagant", "count": 24, "interval": 0.45 },
+          { "enemy": "hormagaunt", "count": 14, "interval": 0.5, "delay": 6 },
+          { "enemy": "tyranid_warrior", "count": 2, "interval": 3, "delay": 10 },
+          { "enemy": "hive_tyrant", "count": 1, "delay": 14, "path": 0 },
+          { "enemy": "genestealer", "count": 8, "interval": 1.0, "delay": 20 }
+        ]
+      }
+    ]
+  }
+}

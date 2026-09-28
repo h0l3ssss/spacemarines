@@ -1,0 +1,42 @@
+{
+  "note": "Custom art. Entries here override procedural sprites with the same name. Never overwritten by generateAssets.",
+  "sheets": [
+    {
+      "name": "marine_tactical",
+      "file": "sprites/custom/marine_tactical.png",
+      "frameWidth": 364,
+      "frameHeight": 133,
+      "originX": 182,
+      "originY": 4,
+      "scale": 0.336,
+      "animations": {
+        "idle": {
+          "row": 0,
+          "frames": 5,
+          "fps": 5,
+          "loop": true
+        },
+        "walk": {
+          "row": 1,
+          "frames": 6,
+          "fps": 10,
+          "loop": true
+        },
+        "attack": {
+          "row": 2,
+          "frames": 4,
+          "fps": 12,
+          "loop": true
+        },
+        "death": {
+          "row": 3,
+          "frames": 5,
+          "fps": 8,
+          "loop": false
+        }
+      }
+    }
+  ],
+  "images": [],
+  "ninePatches": []
+}

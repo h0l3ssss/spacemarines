@@ -1,0 +1,16 @@
+{
+  "id": "tyranid_infestation",
+  "name": "TYRANID INFESTATION",
+  "subtitle": "Hive Node Omega",
+  "description": "The planet is being consumed. Biomass pools, alien spires and spore chimneys rise from what was once a hive city. Strike at the heart of the infestation before the digestion begins.",
+  "theme": "hive",
+  "order": 3,
+  "requires": "necron_tomb_world",
+  "available": false,
+  "planetSprite": "planet_hive",
+  "intro": [
+    "+++ PRIORITY SIGNAL +++",
+    "BIOMASS LEVELS CRITICAL.",
+    "THE HIVE MIND IS FEEDING."
+  ]
+}

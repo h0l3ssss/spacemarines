@@ -1,0 +1,130 @@
+{
+  "termagant": {
+    "name": "Termagant",
+    "faction": "tyranids",
+    "sprite": "tyranid_termagant",
+    "description": "Gaunt-strain bio-construct armed with a fleshborer. Weak alone, deadly in broods.",
+    "counter": "Tactical Bastion, Heavy Bolter, Missile Battery",
+    "hp": 48, "armor": 0, "speed": 40, "radius": 9,
+    "bounty": 5, "leakDamage": 2, "xp": 5,
+    "melee": { "damage": 5, "cooldown": 1.0, "range": 20 },
+    "traits": ["INSTINCTIVE"],
+    "healthBar": { "width": 20, "offset": 30 },
+    "sounds": { "attack": "CLAW", "death": "TYRANID_DEATH" }
+  },
+  "hormagaunt": {
+    "name": "Hormagaunt",
+    "faction": "tyranids",
+    "sprite": "tyranid_hormagaunt",
+    "description": "Fast leaping killers with scything talons. They pounce on the first defender they meet.",
+    "counter": "Assault Bastion to block them, bolters to finish them",
+    "hp": 42, "armor": 0, "speed": 64, "radius": 9,
+    "bounty": 6, "leakDamage": 2, "xp": 6,
+    "melee": { "damage": 8, "cooldown": 0.8, "range": 22 },
+    "traits": ["INSTINCTIVE", "LEAPER"],
+    "healthBar": { "width": 20, "offset": 30 },
+    "sounds": { "attack": "CLAW", "death": "TYRANID_DEATH" }
+  },
+  "gargoyle": {
+    "name": "Gargoyle",
+    "faction": "tyranids",
+    "sprite": "tyranid_gargoyle",
+    "description": "Winged gaunts that fly over the defenders. They cannot be blocked.",
+    "counter": "Tactical Bastion, Lascannon, Plasma (missiles cannot hit flyers)",
+    "hp": 40, "armor": 0, "speed": 56, "radius": 10,
+    "bounty": 8, "leakDamage": 2, "xp": 7,
+    "flying": true, "flyHeight": 36,
+    "traits": ["INSTINCTIVE"],
+    "healthBar": { "width": 20, "offset": 34 },
+    "sounds": { "death": "TYRANID_DEATH" }
+  },
+  "tyranid_warrior": {
+    "name": "Tyranid Warrior",
+    "faction": "tyranids",
+    "sprite": "tyranid_warrior",
+    "description": "Synapse creature: nearby gaunts move faster and hit harder, and its venom cannon suppresses towers. Kill it and the brood falters.",
+    "counter": "Lascannon, Plasma Annihilator, Special Ammunition",
+    "hp": 460, "armor": 0.35, "speed": 30, "radius": 14, "elite": true,
+    "bounty": 30, "leakDamage": 6, "xp": 30,
+    "melee": { "damage": 20, "cooldown": 1.1, "range": 26 },
+    "ranged": { "damage": 45, "range": 170, "cooldown": 8, "projectile": "VENOM", "target": "TOWERS" },
+    "traits": ["SYNAPSE"],
+    "synapse": { "radius": 125, "speedBonus": 0.15, "damageBonus": 0.25 },
+    "healthBar": { "width": 34, "offset": 58 },
+    "sounds": { "attack": "CLAW", "death": "TYRANID_DEATH", "spawn": "TYRANID_SCREECH" }
+  },
+  "genestealer": {
+    "name": "Genestealer",
+    "faction": "tyranids",
+    "sprite": "tyranid_genestealer",
+    "description": "Lightning fast ambush predators whose rending claws tear through power armour.",
+    "counter": "Terminators, Veteran Guard, massed bolter fire",
+    "hp": 180, "armor": 0.2, "speed": 62, "radius": 11,
+    "bounty": 15, "leakDamage": 4, "xp": 15,
+    "melee": { "damage": 22, "cooldown": 0.7, "range": 22 },
+    "traits": ["RENDING"],
+    "healthBar": { "width": 24, "offset": 38 },
+    "sounds": { "attack": "CLAW", "death": "TYRANID_DEATH" }
+  },
+  "carnifex": {
+    "name": "Carnifex",
+    "faction": "tyranids",
+    "sprite": "tyranid_carnifex",
+    "description": "A living battering ram with colossal armour. Its blows crush whole squads.",
+    "counter": "Lascannon, Plasma Annihilator, Orbital Bombardment",
+    "hp": 2100, "armor": 0.5, "speed": 19, "radius": 24, "elite": true, "scale": 1.0,
+    "bounty": 120, "leakDamage": 20, "xp": 120,
+    "melee": { "damage": 70, "cooldown": 1.6, "range": 32 },
+    "traits": ["CLEAVE"],
+    "healthBar": { "width": 56, "offset": 92 },
+    "sounds": { "attack": "HEAVY_IMPACT", "death": "TYRANID_DEATH", "spawn": "BOSS_ROAR" }
+  },
+  "hive_tyrant": {
+    "name": "Hive Tyrant",
+    "faction": "tyranids",
+    "sprite": "tyranid_hivetyrant",
+    "description": "Lord of the swarm. Its psychic screams silence towers, it leaps over defenders and summons broods.",
+    "counter": "Lascannons, Techmarine auras, the Captain and orbital strikes",
+    "hp": 9000, "armor": 0.4, "speed": 17, "radius": 30, "elite": true,
+    "bounty": 600, "leakDamage": 100, "xp": 800,
+    "melee": { "damage": 90, "cooldown": 1.4, "range": 36 },
+    "traits": ["SYNAPSE", "CLEAVE"],
+    "synapse": { "radius": 170, "speedBonus": 0.2, "damageBonus": 0.3 },
+    "healthBar": { "width": 0, "offset": 130 },
+    "sounds": { "attack": "HEAVY_IMPACT", "death": "BOSS_DEATH", "spawn": "BOSS_ROAR" },
+    "boss": {
+      "phases": [
+        {
+          "threshold": 1.0,
+          "announcement": "THE HIVE TYRANT HAS MADE PLANETFALL",
+          "abilities": [
+            { "type": "SPAWN", "enemy": "termagant", "count": 4, "cooldown": 9, "initialDelay": 5 },
+            { "type": "PSYCHIC_SCREAM", "cooldown": 15, "initialDelay": 8, "radius": 170, "duration": 3, "damage": 40 }
+          ]
+        },
+        {
+          "threshold": 0.6,
+          "announcement": "THE TYRANT UNLEASHES ITS FURY!",
+          "speedMult": 1.25,
+          "abilities": [
+            { "type": "LEAP", "cooldown": 10, "initialDelay": 2, "range": 120, "radius": 70, "damage": 80 },
+            { "type": "BIO_PLASMA", "cooldown": 8, "initialDelay": 2, "count": 2, "range": 230, "damage": 70, "radius": 30 },
+            { "type": "SPAWN", "enemy": "hormagaunt", "count": 4, "cooldown": 11, "initialDelay": 4 }
+          ]
+        },
+        {
+          "threshold": 0.3,
+          "announcement": "THE HIVE MIND RAGES - THE TYRANT REGENERATES!",
+          "speedMult": 1.1,
+          "damageMult": 1.3,
+          "abilities": [
+            { "type": "WARP_SHIELD", "cooldown": 18, "initialDelay": 0.5, "amount": 1000, "duration": 8 },
+            { "type": "REGENERATE", "cooldown": 1, "initialDelay": 0.5, "amount": 25 },
+            { "type": "SPAWN", "enemy": "tyranid_warrior", "count": 2, "cooldown": 20, "initialDelay": 2 },
+            { "type": "PSYCHIC_SCREAM", "cooldown": 12, "initialDelay": 6, "radius": 200, "duration": 3.5, "damage": 60 }
+          ]
+        }
+      ]
+    }
+  }
+}

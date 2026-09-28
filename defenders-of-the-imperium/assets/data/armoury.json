@@ -1,0 +1,67 @@
+{
+  "upgrades": [
+    {
+      "id": "logistics",
+      "name": "MUNITORUM LOGISTICS",
+      "description": "+10% starting requisition per rank.",
+      "icon": "icon_requisition",
+      "effect": "STARTING_REQUISITION",
+      "perRank": 0.1,
+      "costs": [1, 1, 2]
+    },
+    {
+      "id": "machine_spirits",
+      "name": "BLESSED MACHINE SPIRITS",
+      "description": "+5% tower damage per rank.",
+      "icon": "icon_damage",
+      "effect": "TOWER_DAMAGE",
+      "perRank": 0.05,
+      "costs": [1, 2, 2]
+    },
+    {
+      "id": "auspex",
+      "name": "AUSPEX ARRAYS",
+      "description": "+4% tower range per rank.",
+      "icon": "icon_range",
+      "effect": "TOWER_RANGE",
+      "perRank": 0.04,
+      "costs": [1, 1, 2]
+    },
+    {
+      "id": "forge_contracts",
+      "name": "FORGE WORLD CONTRACTS",
+      "description": "-5% construction and upgrade costs per rank.",
+      "icon": "icon_upgrade",
+      "effect": "UPGRADE_COST",
+      "perRank": -0.05,
+      "costs": [1, 2, 3]
+    },
+    {
+      "id": "fleet_coordination",
+      "name": "FLEET COORDINATION",
+      "description": "-10% ability cooldowns per rank.",
+      "icon": "icon_ability_droppod",
+      "effect": "ABILITY_COOLDOWN",
+      "perRank": -0.1,
+      "costs": [1, 2, 2]
+    },
+    {
+      "id": "bulwarks",
+      "name": "ADAMANTIUM BULWARKS",
+      "description": "+10 fortress integrity per rank.",
+      "icon": "icon_base",
+      "effect": "BASE_HP",
+      "perRank": 10,
+      "costs": [1, 1, 1]
+    },
+    {
+      "id": "apothecarion",
+      "name": "APOTHECARION",
+      "description": "+10% Space Marine hit points per rank.",
+      "icon": "icon_hp",
+      "effect": "UNIT_HP",
+      "perRank": 0.1,
+      "costs": [1, 1, 2]
+    }
+  ]
+}

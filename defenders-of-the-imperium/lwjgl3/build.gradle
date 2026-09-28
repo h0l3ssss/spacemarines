@@ -1,0 +1,43 @@
+apply plugin: 'application'
+
+eclipse.project.name = "$appName-lwjgl3"
+
+// Assets are shipped inside the runnable jar; during development the game runs with /assets as working dir.
+sourceSets.main.resources.srcDirs += [rootProject.file('assets').path]
+
+application {
+    mainClass = 'com.warhammer.towerdefense.lwjgl3.Lwjgl3Launcher'
+    applicationName = appName
+}
+
+dependencies {
+    implementation project(':core')
+    implementation "com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion"
+    implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+    implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+}
+
+def isMac = System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('mac')
+
+run {
+    workingDir = rootProject.file('assets')
+    ignoreExitValue = true
+    if (isMac) {
+        jvmArgs += '-XstartOnFirstThread'
+    }
+    // Forward -Pargs="--debug --autoplay" style arguments to the game.
+    if (project.hasProperty('args')) {
+        args project.property('args').toString().split('\\s+')
+    }
+}
+
+jar {
+    archiveBaseName.set(appName)
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    dependsOn configurations.runtimeClasspath
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    exclude('META-INF/INDEX.LIST', 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA')
+    manifest {
+        attributes 'Main-Class': application.mainClass.get()
+    }
+}

@@ -1,0 +1,20 @@
+eclipse.project.name = "$appName-tools"
+
+dependencies {
+    // Re-uses the game's data model (maps, manifests) so generated art always matches the JSON definitions.
+    implementation project(':core')
+}
+
+tasks.register('generateAssets', JavaExec) {
+    group = 'assets'
+    description = 'Renders procedural sprites, UI, map backgrounds and audio into /assets.'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.warhammer.towerdefense.tools.AssetGenerator'
+    args rootProject.file('assets').absolutePath
+    systemProperty 'java.awt.headless', 'true'
+    workingDir = rootProject.projectDir
+    // -Ponly=sprites,ui,maps,audio restricts the generation to some groups.
+    if (project.hasProperty('only')) {
+        systemProperty 'generator.only', project.property('only').toString()
+    }
+}

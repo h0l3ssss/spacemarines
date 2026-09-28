@@ -1,0 +1,6 @@
+rootProject.name = 'defenders-of-the-imperium'
+
+// core   : platform independent game (model, view, UI, data loading)
+// lwjgl3 : desktop launcher (Windows / Linux / macOS)
+// tools  : offline asset pipeline (procedural sprites, map backgrounds, audio)
+include 'core', 'lwjgl3', 'tools'

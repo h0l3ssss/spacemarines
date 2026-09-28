@@ -1,0 +1,8 @@
+{
+  "defaultHero": "ultramarines_captain",
+  "maps": [
+    "agri_world_vigilus",
+    "necron_tomb_world",
+    "tyranid_infestation"
+  ]
+}

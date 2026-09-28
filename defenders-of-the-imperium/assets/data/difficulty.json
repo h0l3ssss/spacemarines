@@ -1,0 +1,39 @@
+{
+  "CASUAL": {
+    "name": "CASUAL",
+    "description": "For new recruits: weaker swarms, more requisition, gentler boss.",
+    "enemyHp": 0.8,
+    "enemyDamage": 0.75,
+    "enemySpeed": 0.95,
+    "leakDamage": 0.75,
+    "income": 1.15,
+    "startingRequisitionBonus": 60,
+    "bossHp": 0.75,
+    "bossCooldown": 1.2
+  },
+  "VETERAN": {
+    "name": "VETERAN",
+    "description": "The intended experience: hard, but every wave has an answer.",
+    "enemyHp": 1.0,
+    "enemyDamage": 1.0,
+    "enemySpeed": 1.0,
+    "leakDamage": 1.0,
+    "income": 1.0,
+    "startingRequisitionBonus": 0,
+    "bossHp": 1.0,
+    "bossCooldown": 1.0
+  },
+  "HARD": {
+    "name": "HARD",
+    "description": "Only the Emperor protects: armoured swarms, tighter supply lines, a relentless Hive Tyrant.",
+    "enemyHp": 1.2,
+    "enemyDamage": 1.25,
+    "enemySpeed": 1.05,
+    "enemyArmorBonus": 0.05,
+    "leakDamage": 1.25,
+    "income": 0.9,
+    "startingRequisitionBonus": -20,
+    "bossHp": 1.3,
+    "bossCooldown": 0.85
+  }
+}

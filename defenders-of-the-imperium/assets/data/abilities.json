@@ -1,0 +1,40 @@
+{
+  "abilities": [
+    {
+      "id": "orbital_drop",
+      "name": "ORBITAL DROP",
+      "key": "Z",
+      "cost": 60,
+      "cooldown": 35,
+      "targeted": true,
+      "targetRadius": 70,
+      "icon": "icon_ability_droppod",
+      "description": "A drop pod slams down, stunning enemies. Two Space Marines hold the position for 25 seconds.",
+      "params": { "fallTime": 1.1, "marines": 2, "duration": 25, "impactDamage": 90, "impactRadius": 70, "stun": 1.5, "marineHp": 230, "marineDamage": 16 }
+    },
+    {
+      "id": "orbital_bombardment",
+      "name": "ORBITAL BOMBARDMENT",
+      "key": "X",
+      "cost": 120,
+      "cooldown": 60,
+      "targeted": true,
+      "targetRadius": 110,
+      "icon": "icon_ability_bombard",
+      "description": "The battle barge fires its lance batteries: after 2 seconds the target area is obliterated.",
+      "params": { "delay": 2.2, "radius": 110, "damage": 520 }
+    },
+    {
+      "id": "aerial_support",
+      "name": "AERIAL SUPPORT",
+      "key": "C",
+      "cost": 140,
+      "cooldown": 75,
+      "targeted": true,
+      "targetRadius": 90,
+      "icon": "icon_ability_thunderhawk",
+      "description": "A Thunderhawk gunship strafes across the battlefield and carpet-bombs the target area.",
+      "params": { "speed": 520, "fireInterval": 0.09, "strafeDamage": 26, "strafeWidth": 75, "bombs": 6, "bombDamage": 120, "bombRadius": 55, "bombLead": 80 }
+    }
+  ]
+}

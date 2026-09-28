@@ -1,0 +1,297 @@
+{
+  "towers": [
+    {
+      "id": "tactical",
+      "name": "TACTICAL BASTION",
+      "role": "Rapid fire - anti-infantry - hits flyers",
+      "behavior": "RANGED",
+      "icon": "icon_tower_tactical",
+      "description": "A fortified firebase manned by battle-brothers with bolt rifles. Fast, accurate and deadly against light swarms.",
+      "tiers": [
+        {
+          "name": "Tactical Bastion",
+          "cost": 70,
+          "description": "Sandbagged firebase manned by two battle-brothers.",
+          "stats": {
+            "damageMin": 8, "damageMax": 12, "range": 150, "cooldown": 0.6,
+            "projectile": "BOLT", "damageType": "KINETIC", "canHitAir": true,
+            "sprite": "tower_tactical_1", "crew": "marine_tactical", "crewCount": 2,
+            "integrity": 220, "towerArmor": 0.1
+          }
+        },
+        {
+          "name": "Fortified Bastion",
+          "cost": 110,
+          "description": "Ferrocrete walls and heavier rounds.",
+          "stats": { "damageMin": 12, "damageMax": 17, "range": 160, "cooldown": 0.55, "sprite": "tower_tactical_2", "integrity": 300, "towerArmor": 0.15 }
+        },
+        {
+          "name": "Bastion Stronghold",
+          "cost": 160,
+          "description": "A third battle-brother joins the firing line.",
+          "stats": { "damageMin": 17, "damageMax": 24, "range": 172, "cooldown": 0.5, "crewCount": 3, "sprite": "tower_tactical_3", "integrity": 380, "towerArmor": 0.2 }
+        }
+      ],
+      "specializations": [
+        {
+          "id": "bolter_discipline",
+          "name": "BOLTER DISCIPLINE",
+          "icon": "icon_spec_bolter",
+          "cost": 230,
+          "description": "Veteran marksmen: faster fire, heavier hits and a 15% chance to double-tap.",
+          "modifiers": { "cooldown": "*0.8", "damageMin": "+3", "damageMax": "+4", "extraShotChance": 0.15, "sprite": "tower_tactical_a", "crew": "marine_sternguard" },
+          "ranks": [
+            { "name": "Rapid Fire Drills", "cost": 170, "description": "+25% rate of fire.", "modifiers": { "cooldown": "*0.8" } },
+            { "name": "Double Tap Doctrine", "cost": 210, "description": "+5 damage and a 35% chance to fire an extra shot.", "modifiers": { "damageMin": "+5", "damageMax": "+5", "extraShotChance": 0.35 } }
+          ]
+        },
+        {
+          "id": "special_ammunition",
+          "name": "SPECIAL AMMUNITION",
+          "icon": "icon_spec_ammo",
+          "cost": 240,
+          "description": "Kraken penetrator rounds: armour piercing, and hits may crack carapace (armour break).",
+          "modifiers": { "armorPierce": 0.3, "status": "ARMOR_BREAK", "statusChance": 0.35, "statusDuration": 3, "statusPower": 0.2, "sprite": "tower_tactical_b", "crew": "marine_sternguard" },
+          "ranks": [
+            { "name": "Vengeance Rounds", "cost": 180, "description": "+60% damage against elites, +30% against bosses.", "modifiers": { "eliteDamage": 1.6, "bossDamage": 1.3 } },
+            { "name": "Hellfire Shells", "cost": 220, "description": "Explosive mass-reactive rounds: small splash damage and +4 damage.", "modifiers": { "splashRadius": 32, "splashFalloff": 0.6, "damageMin": "+3", "damageMax": "+4" } }
+          ]
+        },
+        {
+          "id": "heavy_bolter",
+          "name": "HEAVY BOLTER EMPLACEMENT",
+          "icon": "icon_spec_heavybolter",
+          "cost": 260,
+          "description": "A heavy bolter on a fortified mount: slower bursts, but enormous damage per second that shreds hordes.",
+          "modifiers": { "projectile": "HEAVY_BOLT", "damageMin": 42, "damageMax": 55, "cooldown": 0.7, "range": 182, "splashRadius": 26, "splashFalloff": 0.5, "sprite": "tower_tactical_c", "crew": "marine_heavybolter", "crewCount": 1 },
+          "ranks": [
+            { "name": "Suppressive Fire", "cost": 190, "description": "Hits slow enemies by 30%.", "modifiers": { "status": "SLOW", "statusChance": 1, "statusDuration": 1.2, "statusPower": 0.3 } },
+            { "name": "Hellstorm Belts", "cost": 240, "description": "+12 damage and wider splash.", "modifiers": { "damageMin": "+12", "damageMax": "+12", "splashRadius": 36 } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "assault",
+      "name": "ASSAULT BASTION",
+      "role": "Barracks - blocks the road - melee",
+      "behavior": "BARRACKS",
+      "icon": "icon_tower_assault",
+      "description": "Assault Intercessors with chainswords charge out to block the road and hold the enemy in melee.",
+      "tiers": [
+        {
+          "name": "Assault Bastion",
+          "cost": 70,
+          "description": "Chapel-bunker housing three Assault Intercessors.",
+          "stats": {
+            "unitType": "assault_marine", "unitCount": 3, "unitHp": 95, "unitArmor": 0.3,
+            "unitDamageMin": 6, "unitDamageMax": 10, "unitCooldown": 1.0, "unitRespawn": 10, "unitRegen": 5,
+            "rallyRange": 170, "range": 170, "sprite": "tower_assault_1", "integrity": 300, "towerArmor": 0.2
+          }
+        },
+        {
+          "name": "Assault Chapter-House",
+          "cost": 110,
+          "description": "Better wargear and longer training.",
+          "stats": { "unitHp": 140, "unitArmor": 0.35, "unitDamageMin": 9, "unitDamageMax": 14, "unitRegen": 7, "sprite": "tower_assault_2", "integrity": 380 }
+        },
+        {
+          "name": "Fortress-Monastery Gate",
+          "cost": 150,
+          "description": "Fully armed battle-brothers, faster reinforcements.",
+          "stats": { "unitHp": 190, "unitArmor": 0.4, "unitDamageMin": 13, "unitDamageMax": 19, "unitRegen": 9, "unitRespawn": 9, "sprite": "tower_assault_3", "integrity": 460 }
+        }
+      ],
+      "specializations": [
+        {
+          "id": "veteran_guard",
+          "name": "VETERAN GUARD",
+          "icon": "icon_spec_veteran",
+          "cost": 220,
+          "description": "Hardened veterans with superior wargear: much tougher and deadlier.",
+          "modifiers": { "unitType": "veteran_marine", "unitHp": 280, "unitArmor": 0.5, "unitDamageMin": 18, "unitDamageMax": 26, "sprite": "tower_assault_a" },
+          "ranks": [
+            { "name": "Sweeping Blows", "cost": 160, "description": "Every strike also hits a second enemy.", "modifiers": { "unitCleave": 1 } },
+            { "name": "Unbreakable Line", "cost": 210, "description": "Each veteran holds two enemies at once; +6 damage.", "modifiers": { "unitMaxEngaged": 2, "unitDamageMin": "+6", "unitDamageMax": "+6" } }
+          ]
+        },
+        {
+          "id": "terminator_deployment",
+          "name": "TERMINATOR DEPLOYMENT",
+          "icon": "icon_spec_terminator",
+          "cost": 290,
+          "description": "A Terminator squad teleports in: massive armour, power fists and storm bolters that fire even in melee.",
+          "modifiers": {
+            "unitType": "terminator", "unitCount": 2, "unitHp": 520, "unitArmor": 0.65,
+            "unitDamageMin": 32, "unitDamageMax": 44, "unitCooldown": 1.3, "unitRangedDamage": 12, "unitRange": 120,
+            "unitRangedCooldown": 0.5, "unitMaxEngaged": 2, "unitRespawn": 14, "sprite": "tower_assault_b"
+          },
+          "ranks": [
+            { "name": "Full Squad", "cost": 210, "description": "A third Terminator joins the squad.", "modifiers": { "unitCount": 3 } },
+            { "name": "Relic Wargear", "cost": 250, "description": "+200 hit points and +8 storm bolter damage.", "modifiers": { "unitHp": "+200", "unitRangedDamage": "+8" } }
+          ]
+        },
+        {
+          "id": "chaplain_support",
+          "name": "CHAPLAIN SUPPORT",
+          "icon": "icon_spec_chaplain",
+          "cost": 240,
+          "description": "A Chaplain leads the squad: his litanies heal and inspire every brother around him.",
+          "modifiers": { "chaplain": 1, "chaplainHeal": 8, "chaplainDamage": 0.25, "sprite": "tower_assault_c" },
+          "ranks": [
+            { "name": "Litany of Hate", "cost": 180, "description": "+35% damage aura and faster healing.", "modifiers": { "chaplainHeal": 14, "chaplainDamage": 0.35 } },
+            { "name": "Words of Wrath", "cost": 220, "description": "The Chaplain's blows stun enemies; +60 hit points for the squad.", "modifiers": { "chaplainStun": 0.8, "unitHp": "+60" } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "devastator",
+      "name": "DEVASTATOR EMPLACEMENT",
+      "role": "Artillery - long range - splash - ground only",
+      "behavior": "RANGED",
+      "icon": "icon_tower_devastator",
+      "description": "A fortified heavy weapons platform. Slow, long ranged and devastating. Its missiles cannot hit flyers.",
+      "tiers": [
+        {
+          "name": "Devastator Emplacement",
+          "cost": 110,
+          "description": "A missile launcher team on a reinforced platform.",
+          "stats": {
+            "damageMin": 40, "damageMax": 60, "range": 195, "cooldown": 2.4,
+            "projectile": "MISSILE", "damageType": "EXPLOSIVE", "splashRadius": 40, "splashFalloff": 0.5, "canHitAir": false,
+            "sprite": "tower_devastator_1", "crew": "marine_devastator_missile", "crewCount": 1,
+            "integrity": 260, "towerArmor": 0.15
+          }
+        },
+        {
+          "name": "Devastator Redoubt",
+          "cost": 160,
+          "description": "Heavier warheads and better targeting.",
+          "stats": { "damageMin": 60, "damageMax": 85, "splashRadius": 44, "cooldown": 2.3, "range": 205, "sprite": "tower_devastator_2", "integrity": 340 }
+        },
+        {
+          "name": "Devastator Bastion",
+          "cost": 220,
+          "description": "Two launcher teams firing in turn.",
+          "stats": { "damageMin": 88, "damageMax": 118, "splashRadius": 48, "cooldown": 2.2, "range": 215, "crewCount": 2, "sprite": "tower_devastator_3", "integrity": 420 }
+        }
+      ],
+      "specializations": [
+        {
+          "id": "lascannon",
+          "name": "LASCANNON",
+          "icon": "icon_spec_lascannon",
+          "cost": 320,
+          "description": "An instant beam of enormous damage. Ignores most armour, devastating against elites and bosses. Hits flyers.",
+          "modifiers": {
+            "projectile": "LASER", "damageType": "ENERGY", "damageMin": 250, "damageMax": 310, "cooldown": 2.6, "range": 240,
+            "splashRadius": 0, "canHitAir": true, "armorPierce": 0.3, "eliteDamage": 1.25, "bossDamage": 1.5,
+            "crew": "marine_devastator_lascannon", "crewCount": 1, "sprite": "tower_devastator_a"
+          },
+          "ranks": [
+            { "name": "Focusing Lenses", "cost": 220, "description": "+18% rate of fire.", "modifiers": { "cooldown": "*0.85" } },
+            { "name": "Sunfury Capacitors", "cost": 260, "description": "+90 damage; double damage against bosses.", "modifiers": { "damageMin": "+90", "damageMax": "+90", "bossDamage": 2.0 } }
+          ]
+        },
+        {
+          "id": "missile_battery",
+          "name": "MISSILE BATTERY",
+          "icon": "icon_spec_missiles",
+          "cost": 300,
+          "description": "Frag missile racks: three missiles per volley saturate the road. The horde killer.",
+          "modifiers": { "projectile": "MISSILE", "missiles": 3, "damageMin": 42, "damageMax": 62, "cooldown": 2.5, "splashRadius": 58, "sprite": "tower_devastator_b" },
+          "ranks": [
+            { "name": "Extended Racks", "cost": 200, "description": "Four missiles per volley.", "modifiers": { "missiles": 4 } },
+            { "name": "Incendiary Warheads", "cost": 240, "description": "Missiles set the ground ablaze (burn) and explode wider.", "modifiers": { "status": "BURN", "statusChance": 1, "statusDuration": 3, "statusPower": 14, "splashRadius": 68 } }
+          ]
+        },
+        {
+          "id": "plasma_annihilator",
+          "name": "PLASMA ANNIHILATOR",
+          "icon": "icon_spec_plasma",
+          "cost": 310,
+          "description": "A plasma cannon: huge energy damage that melts elites and hits flyers. Overheats after each salvo.",
+          "modifiers": {
+            "projectile": "PLASMA", "damageType": "ENERGY", "damageMin": 115, "damageMax": 145, "cooldown": 1.1, "range": 210,
+            "splashRadius": 30, "splashFalloff": 0.6, "armorPierce": 0.5, "eliteDamage": 1.6, "canHitAir": true,
+            "overheatShots": 6, "overheatTime": 3.5, "crew": "marine_devastator_plasma", "crewCount": 1, "sprite": "tower_devastator_c"
+          },
+          "ranks": [
+            { "name": "Plasma Burn", "cost": 210, "description": "Targets keep burning after the hit.", "modifiers": { "status": "BURN", "statusChance": 1, "statusDuration": 2.5, "statusPower": 20 } },
+            { "name": "Sustained Fire Rituals", "cost": 250, "description": "+30 damage; overheats only after 10 shots.", "modifiers": { "damageMin": "+30", "damageMax": "+30", "overheatShots": 10 } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "techmarine",
+      "name": "TECHMARINE FORTIFICATION",
+      "role": "Support - buffs towers - repairs",
+      "behavior": "SUPPORT",
+      "icon": "icon_tower_techmarine",
+      "description": "A Techmarine and his machines. Nearby towers gain range and rate of fire, structures are armoured and repaired.",
+      "tiers": [
+        {
+          "name": "Techmarine Fortification",
+          "cost": 100,
+          "description": "+10% range and fire rate to nearby towers; repairs structures.",
+          "stats": {
+            "auraRadius": 150, "auraRange": 0.1, "auraFireRate": 0.1, "auraArmor": 0.1, "repair": 5, "range": 150,
+            "sprite": "tower_techmarine_1", "crew": "marine_techmarine", "crewCount": 1, "integrity": 300, "towerArmor": 0.25
+          }
+        },
+        {
+          "name": "Forge Redoubt",
+          "cost": 140,
+          "description": "+14% range and fire rate, faster repairs.",
+          "stats": { "auraRadius": 165, "auraRange": 0.14, "auraFireRate": 0.14, "repair": 8, "range": 165, "sprite": "tower_techmarine_2", "integrity": 380 }
+        },
+        {
+          "name": "Machine Sanctum",
+          "cost": 190,
+          "description": "+18% range and fire rate, +6% damage.",
+          "stats": { "auraRadius": 180, "auraRange": 0.18, "auraFireRate": 0.18, "auraDamage": 0.06, "repair": 11, "range": 180, "sprite": "tower_techmarine_3", "integrity": 460 }
+        }
+      ],
+      "specializations": [
+        {
+          "id": "servo_skulls",
+          "name": "SERVO-SKULL WING",
+          "icon": "icon_spec_skulls",
+          "cost": 240,
+          "description": "Servo-skulls zap enemies and mark them: marked enemies take +20% damage from every source.",
+          "modifiers": { "skulls": 2, "skullDamage": 14, "skullCooldown": 1.2, "markDuration": 4, "markPower": 0.2, "range": 210, "sprite": "tower_techmarine_a" },
+          "ranks": [
+            { "name": "Auspex Swarm", "cost": 170, "description": "A third skull; marks are stronger (+28%).", "modifiers": { "skulls": 3, "markPower": 0.28 } },
+            { "name": "Lascutter Skulls", "cost": 220, "description": "Four skulls with heavier zaps.", "modifiers": { "skulls": 4, "skullDamage": 26 } }
+          ]
+        },
+        {
+          "id": "mechanicus",
+          "name": "ADEPTUS MECHANICUS SUPPORT",
+          "icon": "icon_spec_mechanicus",
+          "cost": 260,
+          "description": "Tech-priests of Mars bless the machine spirits: much stronger auras and faster repairs.",
+          "modifiers": { "auraFireRate": 0.28, "auraRange": 0.25, "auraDamage": 0.12, "repair": 16, "auraRadius": 195, "range": 195, "sprite": "tower_techmarine_b" },
+          "ranks": [
+            { "name": "Binharic Hymns", "cost": 180, "description": "+20% damage aura.", "modifiers": { "auraDamage": 0.2 } },
+            { "name": "Noospheric Uplink", "cost": 240, "description": "A wider and stronger aura.", "modifiers": { "auraFireRate": 0.35, "auraRadius": 225, "auraRange": 0.3, "range": 225 } }
+          ]
+        },
+        {
+          "id": "fortress_node",
+          "name": "FORTRESS NODE",
+          "icon": "icon_spec_fortress",
+          "cost": 280,
+          "description": "A void-shield node: projects a barrier across the road that holds enemies back, and hardens nearby structures.",
+          "modifiers": { "barrierHp": 800, "barrierDuration": 10, "barrierCooldown": 16, "auraArmor": 0.3, "range": 200, "auraRadius": 200, "sprite": "tower_techmarine_c" },
+          "ranks": [
+            { "name": "Reinforced Generators", "cost": 190, "description": "The barrier absorbs 1300 damage.", "modifiers": { "barrierHp": 1300 } },
+            { "name": "Overcharged Projectors", "cost": 240, "description": "Faster barrier recharge; +5% range and fire rate aura.", "modifiers": { "barrierCooldown": 11, "auraRange": "+0.05", "auraFireRate": "+0.05" } }
+          ]
+        }
+      ]
+    }
+  ]
+}
